@@ -1,10 +1,12 @@
 Algoritmo "troco_verificado"
+//
+//
 
 // Programa para calcular o troco.
 
 Var
 
-   precoUnitario, dinheiroRecebido, total, troco, falta: real
+   precoUnitario, dinheiroRecebido, compra: real
    quantidade: inteiro
 
 Inicio
@@ -16,16 +18,12 @@ Inicio
    escreva ("Dinheiro recebido: ")
    leia (dinheiroRecebido)
 
-   total <- precoUnitario * quantidade
-   troco <- dinheiroRecebido - total
-   falta <- total - dinheiroRecebido
+   compra <- dinheiroRecebido - precoUnitario * quantidade
 
-   se dinheiroRecebido >= total entao
-      escreval ("Troco = ", troco:6:2)
+   se compra >= 0 entao
+      escreval ("TROCO = ", compra:4:2, " REAIS.")
    senao
-      se dinheiroRecebido < total entao
-         escreval ("DINHEIRO INSUFICIENTE, FALTA ", falta:4:2, " REAIS.")
-      fimse
+      escreval ("DINHEIRO INSUFICIENTE, FALTAM ", -1*compra:4:2, " REAIS.")
    fimse
 
 Fimalgoritmo
