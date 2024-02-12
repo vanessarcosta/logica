@@ -12,10 +12,10 @@ Inicio
    escreva ("Digite a medida da glicose: ")
    leia (glicose)
 
-   se glicose <= 100 entao
+   se glicose <= 100.0 entao
       escreval ("Classificação: normal")
    senao
-      se (glicose > 100) e (glicose <= 140) entao
+      se glicose <= 140.0 entao
          escreval ("Classificação: elevado")
       senao
          escreval ("Classificação: diabetes")
