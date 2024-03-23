@@ -1,7 +1,7 @@
 Algoritmo "aumento"
 // O usuário informao o salario e o programa calcula o aumento de acordo com cada percentual
 Var
-   salario, novoSalario : real
+   salario, novoSalario, aumento, porcentagem : real
 
 Inicio
 
@@ -9,33 +9,25 @@ Inicio
    escreva ("Digite o salário da pessoa: ")
    leia (salario)
 
-   se salario <= 1000 entao
-      novoSalario <- salario * 1.20
-      escreval ("Novo salário = ", novoSalario:4:2)
-      escreval ("Aumento = ", novoSalario - salario:4:2)
-      escreval ("Porcetagem = 20 %")
+   se salario <= 1000.0 entao
+      porcentagem <- 20
    senao
-      se salario <= 3000 entao
-         novoSalario <- salario * 1.15
-         escreval ("Novo salário = ", novoSalario:4:2)
-         escreval ("Aumento = ", novoSalario - salario:4:2)
-         escreval ("Porcetagem = 15 %")
+      se salario <= 3000.0 entao
+         porcentagem <- 15
       senao
-         se salario <= 8000 entao
-            novoSalario <- salario * 1.10
-            escreval ("Novo salário = ", novoSalario:4:2)
-            escreval ("Aumento = ", novoSalario - salario:4:2)
-            escreval ("Porcetagem = 10 %")
+         se salario <= 8000.0 entao
+            porcentagem <- 10
          senao
-            novoSalario <- salario * 1.05
-            escreval ("Novo salário = ", novoSalario:4:2)
-            escreval ("Aumento = ", novoSalario - salario:4:2)
-            escreval ("Porcetagem = 5%")
+            porcentagem <- 5
          fimse
       fimse
    fimse
 
+   aumento <- salario * porcentagem / 100
+   novoSalario <- salario + aumento
 
-
+   escreval ("Novo salário = ", novoSalario:4:2)
+   escreval ("Aumento = ", aumento:4:2)
+   escreval ("Porcentagem = ", porcentagem, " %")
 
 Fimalgoritmo
