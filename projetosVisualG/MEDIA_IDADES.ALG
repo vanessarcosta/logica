@@ -1,0 +1,23 @@
+Algoritmo "media_idades"
+// programa calcula media e se informar um numero negativo mostrar impossive calculo
+//  
+Var
+
+   idade,quantidade: inteiro
+   media: real
+
+
+Inicio
+
+      escreval ("Digite as idades: ")
+      leia (idade)
+
+      quantidade <- 0
+      media <- 0
+      enquanto idade > 0 faca
+        quantidade <-quantidade + 1
+        media <- media + idade /quantidade
+      fimenquanto
+      escreval ("MEDIA = ", media:4:2)
+
+Fimalgoritmo
