@@ -9,29 +9,23 @@ Var
 
 Inicio
 
-   escreva ("Digite dois numeros: ")
+   escreval ("Digite dois numeros: ")
    leia (x)
    leia (y)
 
-   se x < y entao
-      escreval ("CRESCENTE!")
-   senao
-      escreval ("DECRESCENTE!")
-   fimse
-
-
    enquanto x <> y faca
-      escreva ("Digite outros dois numeros: ")
-      leia (x)
-      leia (y)
+
       se x < y entao
          escreval ("CRESCENTE!")
       senao
          escreval ("DECRESCENTE!")
       fimse
+
+      escreval ("Digite outros dois numeros: ")
+      leia (x)
+      leia (y)
+
    fimenquanto
-
-
 
 
 Fimalgoritmo
