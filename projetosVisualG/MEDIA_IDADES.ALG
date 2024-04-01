@@ -12,12 +12,17 @@ Inicio
       escreval ("Digite as idades: ")
       leia (idade)
 
+      se idade < 0 entao
+      escreval ("IMPOSSIVEL CALCULAR")
+      senao
       quantidade <- 0
       media <- 0
       enquanto idade > 0 faca
         quantidade <-quantidade + 1
-        media <- media + idade /quantidade
+        media <- (media + idade) /quantidade
+        leia (idade)
       fimenquanto
       escreval ("MEDIA = ", media:4:2)
+      fimse
 
 Fimalgoritmo
