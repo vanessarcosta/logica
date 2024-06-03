@@ -14,7 +14,7 @@ Inicio
 
    enquanto (x <> 0) e (y <> 0) faca
 
-      se  (x  >0)e  (y >0) entao
+      se  (x  > 0) e  (y > 0) entao
          escreval ("QUADRANTE Q1")
       senao
          se (x < 0) e  (y > 0)  entao
@@ -23,9 +23,7 @@ Inicio
             se  (x < 0) e (y < 0) entao
                escreval ("QUADRANTE Q3")
             senao
-               se (x > 0) e (y < 0)  entao
                   escreval ("QUADRANTE Q4")
-               fimse
             fimse
          fimse
       fimse
