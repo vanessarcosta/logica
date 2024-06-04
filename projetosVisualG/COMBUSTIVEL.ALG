@@ -2,8 +2,7 @@ Algoritmo "combustivel"
 
 Var
 
-   combustivel: inteiro
-   alcool,gasolina,diesel: inteiro
+   combustivel, alcool, gasolina, diesel: inteiro
 
 Inicio
 
@@ -13,9 +12,9 @@ Inicio
 
    escreva ("Informe um codigo (1, 2, 3) ou 4 para parar: ")
    leia (combustivel)
+   
    enquanto combustivel <> 4 faca
-      escreva ("Informe um codigo (1, 2, 3) ou 4 para parar: ")
-      leia (combustivel)
+   
       escolha combustivel
       caso 1
          alcool <- alcool + 1
@@ -24,6 +23,9 @@ Inicio
       caso 3
          diesel <- diesel + 1
       fimescolha
+      
+      escreva ("Informe um codigo (1, 2, 3) ou 4 para parar: ")
+      leia (combustivel)
    fimenquanto
 
    escreval ("MUITO OBRIGADO")
