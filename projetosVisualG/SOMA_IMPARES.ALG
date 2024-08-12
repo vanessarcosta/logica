@@ -18,6 +18,7 @@ Inicio
       Y <- troca
    fimse
 
+   soma <- 0
    para i de x + 1 ate y - 1  faca
       se i % 2 <> 0 entao
          soma <- soma + i
