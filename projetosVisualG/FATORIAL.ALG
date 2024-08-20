@@ -1,4 +1,4 @@
-Algoritmo "divisao"
+Algoritmo "fatorial"
 
 
 Var
