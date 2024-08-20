@@ -11,28 +11,27 @@ Inicio
    leia (N)
 
    para i de 1 ate N faca
-   
-   escreva ("Digite um numero: ")
+
+      escreva ("Digite um numero: ")
       leia (q)
 
       se q = 0 entao
          escreval ("NULO")
       senao
          se q % 2 <> 0 entao
-            escreva ("IMPAR ")
+            se q > 0 entao
+               escreval ("IMPAR POSITIVO")
+            senao
+               escreval ("IMPAR NEGATIVO")
+            fimse
          senao
-            escreva ("PAR ")
+            se q > 0 entao
+               escreval ("PAR POSITIVO")
+            senao
+               escreval ("PAR NEGATIVO")
+            fimse
          fimse
       fimse
-
-      se q > 0 entao
-         escreval ("POSITIVO")
-      senao
-           se q < 0 entao
-              escreval ("NEGATIVO")
-           fimse
-      fimse
-
    fimpara
 
 Fimalgoritmo
