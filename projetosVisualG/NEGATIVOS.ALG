@@ -4,7 +4,7 @@ Algoritmo "negativos"
 Var
 
    N, i: inteiro
-   vet: vetor [0..9] de real
+   vet: vetor [0..9] de inteiro
 
 Inicio
 
