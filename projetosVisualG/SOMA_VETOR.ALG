@@ -20,11 +20,12 @@ Inicio
       leia (vet[i])
    fimpara
 
+   escreval
    escreva ("VALORES = ")
 
    para i de 0 ate N-1 faca
       soma <- vet[i] + soma
-       escreva (vet[i]:3:1)
+       escreva (vet[i]:3:1, "  ")
 
    fimpara
     escreval()
