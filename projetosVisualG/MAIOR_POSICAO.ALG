@@ -3,8 +3,9 @@ Algoritmo "maior_posicao"
 
 Var
 
-   N, i, posicao, a: inteiro
-   vet: vetor [0..10] de inteiro
+   N, i, posicao: inteiro
+   maior: real
+   vet: vetor [0..10] de real
 
 Inicio
 
@@ -12,19 +13,23 @@ Inicio
    escreva ("Quantos numeros voce vai digitar? ")
    leia (N)
 
-   a <- vet [0]
    para i de 0 ate N-1 faca
       escreva ("Digite um numero: ")
       leia (vet[i])
+   fimpara
 
+   maior <- vet [0]
+   posicao <- 0
 
-      se vet [i] > a entao
-         a <- vet [i]
+   para i de 1 ate N-1 faca
+      se vet [i] > maior entao
+         maior <- vet [i]
          posicao <- i
       fimse
-
    fimpara
-   escreval ("MAIOR VALOR = ", a:3:1)
+
+   escreval
+   escreval ("MAIOR VALOR = ", maior:4:2)
    escreval ("POSICAO DO MAIOR VALOR = ", posicao)
 
 Fimalgoritmo
