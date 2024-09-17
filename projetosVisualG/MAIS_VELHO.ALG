@@ -4,31 +4,33 @@ Algoritmo "mais_velho"
 
 Var
 
-   N, i, posicao, a: inteiro
-   nome: vetor [0..9] de caractere
-   idade: vetor [0..9] de inteiro
+   N, i, posicao, maior: inteiro
+   nomes: vetor [0..9] de caractere
+   idades: vetor [0..9] de inteiro
 
 Inicio
 
    escreva ("Quantas pessoas voce vai digitar? ")
    leia (N)
 
-   a <- idade[0]
-
    para i de 0 ate N-1 faca
-
       escreval ("Dados da ", i+1,"a pessoa: ")
       escreva ("Nome: ")
-      leia (nome[i])
+      leia (nomes[i])
       escreva ("Idade: ")
-      leia (idade[i])
+      leia (idades[i])
+   fimpara
 
-      se idade [i] > a entao
-         a <- idade[i]
+   maior <- idades[0]
+   posicao <- 0
+
+   para i de 1 ate N-1 faca
+      se idades [i] > maior entao
+         maior <- idades[i]
          posicao <- i
       fimse
-
    fimpara
-   escreval ("PESSOA MAIS VELHA: ", nome[posicao])
+
+   escreval ("PESSOA MAIS VELHA: ", nomes[posicao])
 
 Fimalgoritmo
