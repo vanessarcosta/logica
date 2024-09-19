@@ -1,14 +1,13 @@
 Algoritmo "comerciante"
 
 
-
 Var
 
   N, i, a, b, c: inteiro
   lucro, totalVenda, totalCompra: real
-  produto: vetor[0..9] de caractere
-  precoCompra: vetor[0..9] de real
-  precoVenda: vetor[0..9] de real
+  produtos: vetor[0..9] de caractere
+  precosCompra: vetor[0..9] de real
+  precosVenda: vetor[0..9] de real
   
 Inicio
 
@@ -16,15 +15,13 @@ Inicio
   leia (N)
   
   para i de 0 ate N-1 faca
-  
     escreval("Produto", i + 1, ":")
     escreva ("Nome: ")
-    leia (produto[i])
+    leia (produtos[i])
     escreva ("Preco de compra: ")
-    leia (precoCompra[i])
+    leia (precosCompra[i])
     escreva ("Preco de venda: ")
-    leia (precoVenda[i])
-  
+    leia (precosVenda[i])
   fimpara
   
   lucro <- 0
@@ -34,19 +31,17 @@ Inicio
   c <- 0
   
   para i de 0 ate N-1 faca
-  
-    lucro <- (precoVenda[i] - precoCompra[i]) * 100 / precoCompra[i]
+    lucro <- (precosVenda[i] - precosCompra[i]) * 100 / precosCompra[i]
   
     se lucro < 10 entao
        a <- a + 1
     senao
-       se (lucro > 10) e lucro < 20 entao
+       se lucro <= 20 entao
             b <- b + 1
        senao
             c <- c+ 1
        fimse
     fimse
-
   fimpara
   
   totalCompra <- 0
@@ -54,11 +49,9 @@ Inicio
   lucro <-0
   
   para i de 0 ate N-1 faca
-  
     totalCompra <- totalCompra + precoCompra[i]
     totalVenda <- totalVenda + precoVenda[i]
     lucro <- totalVenda - totalCompra
-    
   fimpara
   
   escreval ("")
@@ -66,8 +59,8 @@ Inicio
   escreval ("Lucro abaixo de 10%: ", a)
   escreval ("Lucro entre 10% e 20%: ", b)
   escreval ("Lucro acima de 20%: ", c)
-  escreval ("Valor total de compra: ", totalCompra:3:2)
-  escreval ("Valor total de venda: ", totalVenda:3:2)
-  escreval ("Lucro total: ", lucro:3:2)
+  escreval ("Valor total de compra: ", totalCompra:4:2)
+  escreval ("Valor total de venda: ", totalVenda:4:2)
+  escreval ("Lucro total: ", lucro:4:2)
   
 Fimalgoritmo
