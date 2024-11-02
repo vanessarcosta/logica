@@ -1,0 +1,46 @@
+algoritmo "semnome"
+// Função : Produtos da frutaria:
+//        Especificação 	            Código	Preço
+//        Maça                        100      2.50 €
+//        Hamburgues                  101      3.50 €
+//Programa calcular o preço total
+// Autor :
+var
+   codigo, quantidade : inteiro
+   valorPagar, valorDesconto : real
+inicio
+   // Seção de Comandos
+   EscrevaL("Especificação 	            Código	")
+   EscrevaL("Morango 	                  100	   ")
+   EscrevaL("Maça              	         101	   ")
+
+   Escreva("Código:  ")
+   Leia(codigo)
+   Escreva("Quantidade:  ")
+   Leia(quantidade)
+   Escolha (codigo)
+   Caso 100
+      se quantidade <= 5 entao
+         valorPagar <- quantidade * 2.5
+      senao
+         valorPagar <- quantidade * 2.2
+      fimse
+   Caso 101
+      se quantidade <= 5 entao
+         valorPagar <- quantidade * 1.8
+      senao
+         valorPagar <- quantidade * 1.5
+      fimse
+   OutroCaso
+      EscrevaL("Código Inválido!")
+   FimEscolha
+   
+   se  (valorPagar <= 25.0) ou (quantidade <= 10)  entao
+      EscrevaL("Valor a pagar = ", valorPagar, " €")
+   senao
+        valorDesconto <- valorPagar / 10
+        valorPagar <- valorPagar - valorDesconto
+      EscrevaL("Valor a pagar = ", valorPagar, " €")
+   fimSe
+
+Fimalgoritmo
