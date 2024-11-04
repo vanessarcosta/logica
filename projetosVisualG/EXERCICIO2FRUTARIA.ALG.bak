@@ -36,7 +36,7 @@ inicio
    FimEscolha
    
    se  (quantidade > 10) ou (valorPagar > 25.0)  entao
-      valorDesconto <- valorPagar * 0.1
+      valorDesconto <- valorPagar / 10
       valorPagar <- valorPagar - valorDesconto
       escrevaL("Valor a pagar = ", valorPagar, " €")
    senao
